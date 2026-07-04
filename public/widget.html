@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Widget Auth0</title>
+  <link rel="stylesheet" href="/public/styles.css" />
+</head>
+<body class="widget">
+  <h3>Widget SPA</h3>
+  <p>Ce widget est chargé dans une page déjà autorisée par le backend.</p>
+
+  <div class="actions">
+    <button id="silentAuthBtn">getTokenSilently()</button>
+    <button id="callApiBtn" disabled>Call protected API</button>
+    <button id="clearCacheBtn">Clear widget cache</button>
+  </div>
+
+  <section class="card compact">
+    <h4>État</h4>
+    <pre id="status">Chargement du widget…</pre>
+  </section>
+
+  <section class="card compact">
+    <h4>Logs</h4>
+    <pre id="logs"></pre>
+  </section>
+
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/2.1/auth0-spa-js.production.js"></script>
+  <script src="/public/widget.js"></script>
+</body>
+</html>
